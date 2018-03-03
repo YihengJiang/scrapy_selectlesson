@@ -1,0 +1,72 @@
+访问 https://passport.ustc.edu.cn/login?service=http%3A%2F%2Fyjs%2Eustc%2Eedu%2Ecn%2Fdefault%2Easp返回cookie：
+laravel_session=eyJpdiI6InBmb0xYZXF3NDgxbWlZdUx0V0NnTnc9PSIsInZhbHVlIjoiKzJRMU1mczhrV0s0SlhSQ29GSkh3Nlo3UE41SWxxQ3RMNWo0ZjVESDZKc1hjVjdtU01CQUNmZE9xempkSEFSSmt5OGtyOVQ4MGRXSGl0RUQrNXRnNGc9PSIsIm1hYyI6ImI5Njc1ZmJhYTYwMDA1MjAwODUzNGM1MjdlZmJkNGY5ZjY2OGU2ZjI2OWE2ZmQzYWNmOTA1ZjczY2RiMGM0MGYifQ%3D%3D; path=/; httponly
+此时网页中的表单中有：_token:J5KTNNPWeiBELW3q2wA9EYPP400cZZd7rBR42kDM
+
+
+https://passport.ustc.edu.cn/login?service=http%3A%2F%2Fyjs%2Eustc%2Eedu%2Ecn%2Fdefault%2Easp
+
+
+点击登录按钮：访问网址：https://passport.ustc.edu.cn/login?service=http%3A%2F%2Fyjs%2Eustc%2Eedu%2Ecn%2Fdefault%2Easp，使用post方式提交表单
+带上laravel_session去请求https://passport.ustc.edu.cn/login?service=http%3A%2F%2Fyjs%2Eustc%2Eedu%2Ecn%2Fdefault%2Easp
+表单数据：
+_token:J5KTNNPWeiBELW3q2wA9EYPP400cZZd7rBR42kDM
+login:SA17006127
+password:hyyhdxwsls713
+button:登录
+（表单的形式：_token=J5KTNNPWeiBELW3q2wA9EYPP400cZZd7rBR42kDM&login=SA17006127&password=hyyhdxwsls713&button=%E7%99%BB%E5%BD%95）
+
+返回的cookie：			
+iPlanetDirectoryPro	deleted	
+laravel_session	eyJpdiI6ImIwNXVsbVR2M2s2R0dlVWVxbGpcL2pBPT0iLCJ2YWx1ZSI6Ilp4Y1Y2SDJ0SVwvNXc2NFlrMlFxVkpkWTF1Um5SN010MTdTREw3SFYrU2VvcWR0bHJlY2pTWEVBenB6SkxzSmYrditBT1wvY2hVeUIrWnRRYnkyZ3Nhdnc9PSIsIm1hYyI6ImIyY2ZlZTZlMGZiYmMwZWRiNzJjZTM5OTYxYzcxZjNkODlhNzQ0NDNkMzNmOGFhOTliMzZlZTU3NjZkYjdkYWQifQ%3D%3D		
+ucas_TGC_2015	eyJpdiI6Ikk5aE1zXC9XcndcL1J1VFF4eHZPRCtIdz09IiwidmFsdWUiOiJTQUtTNlRvNkZnRUJ2dHhjTFRrOUU1U0dMSEdjQVdzYTQzUG5GZ2QwYUhRODg3SjY5OVZ0ZVhqT3BRSWxEdkZEIiwibWFjIjoiZDA5ODFhZjBhNGE2YmEwNjZmYjVhYjExMzJiODg0YzlmOGFmODJhZWYyMmE5ODEyYWIxNmQzMmJjYTUxMTM2ZCJ9		
+
+
+
+
+
+访问http://yjs.ustc.edu.cn/default.asp?ticket=ST-20218b19de2f799138525c0f9c071f1a
+返回cookie：
+ASPSESSIONIDCQBDAQCB=DMLBPGEABHFGPFAMEECHGBCD; path=/
+
+
+
+点击选课与成绩，访问http://yjs.ustc.edu.cn/m_left.asp?area=5&menu=1
+发送的cookie：
+ASPSESSIONIDCQBDAQCB=JMNBPGEAJAKAODMKCMCGENEC
+无返回cookie
+
+
+
+点击网上选课，会打开新的页面，访问的网址为http://mis.teach.ustc.edu.cn/gradLogin.do?stn=SA17006127&ASPSESSIONIDCQBDAQCB=JMNBPGEAJAKAODMKCMCGENEC
+返回Cookie: JSESSIONID=E54176E65EC32D60777F965CA769BE26
+
+点击某门课的选课按钮，发送请求http://mis.teach.ustc.edu.cn/gradSaveKc.do?kcbjh=CNY530601
+发送了JSESSIONID
+返回了一个数字（11代表选课成功，其他代码如下：
+	    else if(str=="12")alert("选课成功,请在抽签结束后查看抽签结果！"); 
+        else if(str=="lixiao"){alert("很抱歉，学籍状态不允许选课！");}
+        else if(str=="yijige"){alert("很抱歉，你已经修过该门课程！");}        
+	    else if(str=="2"){alert("很抱歉，不在选课时间内！");}
+	    else if(str=="3"){alert("很抱歉，课堂不存在!");}
+	    else if(str=="4"){alert("很抱歉，课堂已满员!");} 
+	    else if(str=="5"){alert("很抱歉，你已经选过该课程!");}
+	    else if(str=="6"){alert("很抱歉，你不符合该课堂的学生类型的条件！");}
+	    else if(str=="7"){alert("很抱歉，你不符合该课堂的学生院系的条件！");} 
+	    else if(str=="8"){alert("很抱歉，该课堂已经停选！");}	    
+	    else if(str=="9"){alert("很抱歉，抽签课程，在抽签时间内不能操作！");}
+	    else if(str=="a"){alert("很抱歉，已超出学期可选最大学分23！");}
+	    else if(str=="b"){alert("很抱歉，应用英语类课程每学期限选一门！");}    
+	    else if(str=="-1"){alert("意外错误，选课失败！");}  	      
+	    else if(str=="tcxt"){window.parent.close();} 	    	       
+	    else {alert("意外错误");}	   
+ 	}
+）
+
+
+
+
+查询课程的时候不是返回的json，所以还要自己去解析，太麻烦了，先不做，等以后有时间了再说
+
+
+
+
